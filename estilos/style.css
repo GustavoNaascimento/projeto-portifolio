@@ -59,6 +59,7 @@ section#ficha {
   background-color: var(--fundo-card);
   border-radius: 8px;
   margin-top: 20px;
+  margin-bottom: 10px;
   padding: 20px;
 }
 img.foto {
@@ -91,4 +92,33 @@ div.social a {
 }
 div.social a:hover {
   color: var(--destaque-inv);
+}
+section#detalhes {
+  grid-column: 2;
+}
+article {
+  background-color: var(--fundo-card);
+  color: var(--destaque);
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+article h2 {
+  color: var(--destaque);
+  margin-bottom: 10px;
+}
+.video-cont {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+.video-cont iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+
 }
