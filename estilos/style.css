@@ -20,12 +20,13 @@
 
 body {
   background-color: var(--fundo-principal);
-  height: 100vh;
   line-height: 1.5em;
 }
 header {
+  width: 100%;
   position: sticky;
-  top: 0;
+  top: 0px;
+  z-index: 1;
   background-color: var(--destaque);
   padding: 15px;
 }
@@ -176,13 +177,66 @@ p.titulacao {
   color: var(--texto);
 }
 div.curso:hover {
-  background-color: ;
   transform: scale(1.1);
   box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.171);
 }
+#container-projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#container-projeto .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all ease 0.5s;
+}
+#container-projeto .projeto:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.247);
+}
+#container-projeto .foto-projeto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  object-fit: cover;
+  overflow: hidden;
+}
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inv);
+  text-align: center;
+  padding: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: var(--texto);
+}
+footer a:hover {
+  color: var(--destaque-inv);
+}
+
+
+
 
 @media screen and (min-width: 768px) {
   #container-skills {
     grid-template-columns: 1fr 1fr;
+  }
+  #container-projeto .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  #container-projeto .container-info {
+    max-width: 80%;
+  }
+  #container-projeto .foto-projeto {
+    max-width: 20%;
+    aspect-ratio: 1/1;
+    max-height: 200px;
   }
 }
