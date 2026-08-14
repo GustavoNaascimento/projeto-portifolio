@@ -17,10 +17,19 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif ;
 }
+body.escuro {
+  --fundo-principal: rgba(0, 0, 0, 0.911);
+  --texto: white;
+  --texto-inv: #00ff88;
+  --destaque: #00cf6f;
+  --destaque-inv: #00ff88;
+  --fundo-card: rgba(56, 56, 56, 0.801);
+}
 
 body {
   background-color: var(--fundo-principal);
   line-height: 1.5em;
+  color: var(--texto);
 }
 header {
   width: 100%;
